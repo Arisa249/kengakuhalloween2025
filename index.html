@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARフォトフレーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- カメラ表示エリア -->
+  <div id="camera-container">
+    <video id="camera" autoplay playsinline></video>
+    <img id="frame" src="frame1.png" />
+  </div>
+
+  <!-- 撮影＆フレーム切替ボタン -->
+  <div id="capture-area">
+    <button id="switch-frame">フレーム切り替え</button>
+    <button id="capture">撮影</button>
+  </div>
+
+  <!-- プレビュー画面 -->
+  <div id="preview-container">
+
+    <div id="preview-image-wrapper">
+      <img id="preview" />
+    </div>
+
+    <div id="preview-controls">
+      <button id="retake">撮り直し</button>
+      <div id="save-hint">画像長押しで保存</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

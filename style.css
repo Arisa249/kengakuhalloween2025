@@ -1,0 +1,103 @@
+/* カメラ表示 */
+#camera-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * 7 / 5);
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: black;
+}
+
+#camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 撮影・フレーム切替ボタン */
+#capture-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#capture,
+#switch-frame {
+  padding: 12px 20px;
+  font-size: 1.2em;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+#capture { background: #E40049; }
+#switch-frame { background: #0096BA; }
+
+/* プレビュー画面 */
+#preview-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+}
+
+#preview-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#preview {
+  max-width: 100%;
+  height: auto;
+}
+
+/* プレビュー下部操作 */
+#preview-controls {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 取り直しボタンをフレーム切替風に赤色に */
+#retake {
+  padding: 12px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  background: #00A73F; /* 赤色 */
+  cursor: pointer;
+}
+
+/* 保存ヒント */
+#save-hint {
+  font-size: 0.9em;
+  color: #333;
+}
